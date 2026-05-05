@@ -1,0 +1,1 @@
+# kotohibi-kana-legal
