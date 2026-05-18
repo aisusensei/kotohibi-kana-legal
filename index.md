@@ -1,50 +1,36 @@
-# Gizlilik Politikası — 言響 仮名 (Kotohibi Kana)
+# Gizlilik Politikası — 言響 Kotohibi Kana
 
 **Yürürlük tarihi:** 4 Mayıs 2026
-**Son güncelleme:** 4 Mayıs 2026
+**Son güncelleme:** 19 Mayıs 2026
 **Geliştirici:** Aisu Sensei
-**İletişim:** aisuchanchan@gmail.com
+**İletişim:** kotohibinihongo@gmail.com
 
 ---
 
 ## 1. Genel bakış
 
-**言響 仮名 (Kotohibi Kana)** — Türkçe konuşan öğrenciler için Hiragana ve Katakana öğrenme uygulamasıdır. Bu uygulama:
+**言響 Kotohibi Kana**, Türkçe konuşan öğrenciler için Hiragana ve Katakana yazım biçimlerini öğreten bir uygulamadır. Bu uygulama:
 
-- ✅ **Verilerinizi cihazınızda lokal olarak saklar** — kendi sunucumuz veya bulut depolama yoktur.
+- ✅ **Verilerinizi yalnızca cihazınızda saklar** — sunucu veya bulut depolama kullanmaz.
+- ✅ **Hesap oluşturma gerektirmez** — hemen kullanmaya başlarsınız.
 - ✅ **Reklam göstermez, analitik takibi yapmaz, üçüncü taraf izleme SDK'sı kullanmaz.**
-- ✅ **Bilgilerinizi pazarlama amacıyla paylaşmaz veya satmaz.**
-- ✅ **Hesabınızı uygulama içinden istediğiniz zaman silebilirsiniz.**
+- ✅ **Bilgilerinizi paylaşmaz veya satmaz.**
 
 ---
 
 ## 2. Hangi verileri işliyoruz?
 
-### 2.1 Sizden topladıklarımız (cihazınızda saklanır)
+### 2.1 Cihazınızda saklanan veriler
 
-| Veri | Ne zaman | Nerede saklanır |
-|------|----------|-----------------|
-| Adınız (kullanıcı adı) | Kayıt veya misafir girişi | Cihaz (AsyncStorage) |
-| Şifre **(SHA-256 + tuz ile hash'lenmiş)** | Kayıt | Cihaz (AsyncStorage) |
-| Öğrenme ilerlemeniz (XP, gün serisi, öğrendiğiniz karakterler, quiz istatistikleri) | Uygulamayı kullanırken | Cihaz (AsyncStorage) |
+| Veri | Ne zaman oluşur | Nerede saklanır |
+|------|-----------------|-----------------|
+| Kullanıcı adınız | İlk açılışta girdiğinizde | Cihaz (AsyncStorage) |
+| Öğrenme ilerlemeniz (puan, gün serisi, öğrendiğiniz imler, quiz istatistikleri) | Uygulamayı kullanırken | Cihaz (AsyncStorage) |
 | Tema/maskot tercihiniz | Tercih değiştirdiğinizde | Cihaz (AsyncStorage) |
 
-**Önemli:** Şifreler düz metin olarak saklanmaz. Cihazınızda tek yönlü hash + per-account rastgele tuz ile saklanır.
+### 2.2 Otomatik toplanan veriler
 
-### 2.2 Google ile Giriş seçtiyseniz
-
-Google ile giriş yaptığınızda, Google sizden onay aldığı kapsamda şu profil bilgilerini bize gönderir:
-
-- E-posta adresiniz
-- Ad/soyad
-- Profil fotoğrafı URL'si
-- Google hesap kimliği (Google ID)
-
-Bu bilgiler **yalnızca cihazınızda** saklanır; harici bir sunucuya gönderilmez. Google'ın kendi gizlilik politikası: https://policies.google.com/privacy
-
-### 2.3 Otomatik toplanan veriler
-
-**Hiçbiri.** Konum, IP, cihaz kimliği, kullanım analitiği, çökme raporu — toplanmaz.
+**Hiçbiri.** Konum, IP adresi, cihaz kimliği, kullanım analitiği veya çökme raporu toplanmaz.
 
 ---
 
@@ -52,37 +38,31 @@ Bu bilgiler **yalnızca cihazınızda** saklanır; harici bir sunucuya gönderil
 
 | Amaç | İşlenen veri |
 |------|-------------|
-| Kullanıcıyı tanıma ve kişiselleştirilmiş ilerleme gösterme | Ad, e-posta (Google), öğrenme ilerlemesi |
-| Şifre doğrulama | Şifre hash'i |
-| Tema/maskot tercihinizi hatırlama | Tema ID |
-| Günün karakteri özelliği | Tarih + rastgele seçilen kana |
+| İlerlemenizi göstermek ve sürdürmek | Puan, gün serisi, im istatistikleri |
+| Tema/maskot tercihinizi hatırlamak | Tema ID |
 
-Bu işlemlerin yasal dayanağı, KVKK md. 5/2(c) ve GDPR Art. 6(1)(b) uyarınca **sizinle yapılan sözleşmenin ifası** (uygulamayı size sunmak) ve Art. 6(1)(f) uyarınca **meşru menfaat** (uygulamanın çalışması).
+Bu işlemlerin yasal dayanağı, KVKK md. 5/2(c) ve GDPR Art. 6(1)(b) uyarınca **sizinle yapılan sözleşmenin ifası** ve Art. 6(1)(f) uyarınca **meşru menfaat**tir.
 
 ---
 
 ## 4. Verileriniz kimlerle paylaşılıyor?
 
-**Kimseyle.** Cihazınızdan dışarı çıkmaz.
+**Kimseyle.** Verileriniz cihazınızdan dışarı çıkmaz.
 
-**İstisna:** Google ile Giriş kullandığınızda, Google ile bir kimlik doğrulama (OAuth) alışverişi olur — bu Google'ın hizmeti gereğidir, biz Google'a sizinle ilgili ek veri göndermeyiz.
-
-Yine teknik olarak:
-- **Google Speech / Cihaz Sesi** (`expo-speech`) — kana telaffuzu için cihazınızın yerel ses motorunu kullanır. Yazılan metin işletim sistemine gönderilir; harici bir sunucuya gitmez.
+Teknik not:
+- **Cihaz sesi** (`expo-speech`) — im telaffuzu için cihazınızın yerel ses motorunu kullanır. Metin harici bir sunucuya gönderilmez.
 
 ---
 
 ## 5. Veriler ne kadar saklanıyor?
 
-- **Hesabınızı silene kadar veya uygulamayı kaldırana kadar** cihazınızda saklanır.
-- Hesabınızı sildiğinizde tüm kişisel verileriniz cihazdan kaldırılır (bkz. Bölüm 8).
-- Uygulamayı kaldırırsanız, cihaz işletim sistemi AsyncStorage verilerini temizler.
+Uygulamayı kaldırana kadar cihazınızda saklanır. Uygulamayı kaldırdığınızda işletim sistemi tüm yerel verileri otomatik temizler.
 
 ---
 
 ## 6. Çocukların gizliliği
 
-Bu uygulama 13 yaş ve üzeri kullanıcılar için tasarlanmıştır. 13 yaş altı çocuklardan bilerek veri toplamayız. Çocuğunuzun veri sağladığını düşünüyorsanız aisuchanchan@gmail.com adresinden bize bildirin; veriler derhal silinir.
+Bu uygulama her yaştan öğrenci için uygundur. Kişisel veri toplamaz, hesap oluşturma gerektirmez ve internet bağlantısı olmadan çalışır.
 
 ---
 
@@ -90,47 +70,27 @@ Bu uygulama 13 yaş ve üzeri kullanıcılar için tasarlanmıştır. 13 yaş al
 
 KVKK ve GDPR kapsamında şu haklara sahipsiniz:
 
-- **Erişim**: Hangi verilerinizin işlendiğini öğrenme — uygulama içinde **Profil** ekranında zaten görünür.
-- **Düzeltme**: Yanlış veriyi düzeltme — Profil ekranından adınızı/temanızı değiştirebilirsiniz.
-- **Silme**: Hesabınızı ve tüm verilerinizi silme — bkz. Bölüm 8.
-- **İtiraz**: Veri işlemeye itiraz etme — uygulamayı kaldırarak veya hesabınızı silerek.
-- **Şikayet**: KVKK Kurumu'na (Türkiye) veya yerel veri koruma otoritenize başvurma.
+- **Erişim**: Hangi verilerinizin işlendiğini öğrenme — uygulama içindeki Profil ekranında görünür.
+- **Düzeltme**: Adınızı ve tercihlerinizi Profil ekranından değiştirebilirsiniz.
+- **Silme**: Uygulamayı kaldırarak tüm verilerinizi silebilirsiniz.
+- **İtiraz**: Veri işlemeye itiraz etmek için uygulamayı kaldırmanız yeterlidir.
+- **Şikayet**: KVKK Kurumu'na (Türkiye) veya yerel veri koruma otoritenize başvurabilirsiniz.
 
-Bu hakları kullanmak için aisuchanchan@gmail.com.
+Bu hakları kullanmak için: **kotohibinihongo@gmail.com**
 
 ---
 
-## 8. Hesabınızı nasıl silersiniz?
+## 8. Verilerinizi nasıl silersiniz?
 
-### 8.1 Uygulama içinden (önerilen yol)
+Uygulamayı cihazınızdan kaldırmanız yeterlidir — işletim sistemi tüm yerel verileri (AsyncStorage) otomatik olarak temizler. Sunucuda saklanan veri yoktur.
 
-1. Uygulamayı açın
-2. Sağ üstteki **XP** rozetine veya alt sekmedeki Profil'e dokunun
-3. **Hesap** bölümünde **❌ Hesabımı Sil** butonuna basın
-4. İki adımlı uyarıyı onaylayın
-5. Hesabınız ve tüm verileriniz **anında** cihazdan silinir
-
-### 8.2 Uygulamaya erişiminiz yoksa (e-posta yoluyla)
-
-aisuchanchan@gmail.com adresine şu bilgilerle e-posta atın:
-
-- Konu: **"Hesap Silme Talebi — Kotohibi Kana"**
-- Talep nedeniniz (zorunlu değil)
-- Hesabınızda kullandığınız ad veya Google e-posta adresi
-
-**Not:** Tüm verileriniz cihazınızda saklandığı için biz uzaktan veri silme yapamayız — sizin uygulamayı kaldırmanız gerekir. E-posta üzerinden talep aldığımızda size 7 gün içinde adım adım rehber göndeririz.
-
-### 8.3 Tüm uygulamayı kaldırma
-
-iOS/Android'de uygulamayı kaldırırsanız işletim sistemi tüm yerel verileri otomatik temizler.
+Sorularınız için: **kotohibinihongo@gmail.com**
 
 ---
 
 ## 9. Veri güvenliği
 
-- Şifreler **SHA-256 + per-account rastgele 16-byte tuz** ile hash'lenir, asla düz metin saklanmaz.
-- Google OAuth, endüstri standardı PKCE akışı ile yapılır.
-- Veriler cihazınızda işletim sisteminin sandbox'unda saklanır; başka uygulamalar erişemez.
+Veriler cihazınızda işletim sisteminin korumalı alanında (sandbox) saklanır; başka uygulamalar erişemez.
 
 ---
 
@@ -142,75 +102,63 @@ Bu politikayı zaman zaman güncelleyebiliriz. Önemli değişikliklerde uygulam
 
 ## 11. İletişim
 
-Sorularınız için: **aisuchanchan@gmail.com**
+Sorularınız için: **kotohibinihongo@gmail.com**
 
 ---
 ---
 
-# Privacy Policy — 言響 仮名 (Kotohibi Kana)
+# Privacy Policy — 言響 Kotohibi Kana
 
 **Effective date:** 4 May 2026
-**Last updated:** 4 May 2026
+**Last updated:** 19 May 2026
 **Developer:** Aisu Sensei
-**Contact:** aisuchanchan@gmail.com
+**Contact:** kotohibinihongo@gmail.com
 
 ## 1. Overview
 
-**言響 仮名 (Kotohibi Kana)** is a Hiragana and Katakana learning app for Turkish-speaking students. This app:
+**言響 Kotohibi Kana** is a Hiragana and Katakana learning app for Turkish-speaking students. This app:
 
 - ✅ **Stores your data locally on your device** — no servers, no cloud.
+- ✅ **Does not require account creation** — start using it right away.
 - ✅ **No ads, no analytics, no third-party tracking SDKs.**
 - ✅ **Does not share or sell your information.**
-- ✅ **You can delete your account from within the app at any time.**
 
 ## 2. What we process
 
-### 2.1 Data you provide (stored on your device)
-
-- Your name (username)
-- Password — **stored as SHA-256 hash with per-account random salt**, never plain text
-- Learning progress (XP, streak, learned characters, quiz statistics)
+Data stored on your device only:
+- Your name (entered on first launch)
+- Learning progress (points, streak, learned characters, quiz statistics)
 - Theme/mascot preference
 
-### 2.2 If you sign in with Google
-
-Google provides us with: email, name, profile picture URL, Google account ID. This is stored **only on your device**; not transmitted to any external server. Google's privacy policy: https://policies.google.com/privacy
-
-### 2.3 Automatically collected
-
-**None.** No location, IP, device ID, analytics, or crash reporting.
+**Automatically collected: None.** No location, IP, device ID, analytics, or crash reporting.
 
 ## 3. Why we process
 
-To identify you, save your progress, verify your password (hashed), remember preferences, and provide the daily kana feature. Legal basis: contractual necessity (GDPR Art. 6(1)(b)) and legitimate interest (Art. 6(1)(f)).
+To display and maintain your learning progress and remember your preferences. Legal basis: contractual necessity (GDPR Art. 6(1)(b)) and legitimate interest (Art. 6(1)(f)).
 
 ## 4. Sharing
 
-**No one.** Data does not leave your device, except for the OAuth handshake with Google when you choose to sign in with Google.
+**No one.** Data does not leave your device.
 
 ## 5. Retention
 
-Until you delete your account or uninstall the app.
+Until you uninstall the app. The OS removes all local data automatically.
 
 ## 6. Children's privacy
 
-For users 13+. We do not knowingly collect data from children under 13.
+This app is suitable for all ages. It does not collect personal data, does not require account creation, and works offline.
 
 ## 7. Your rights
 
-Access, rectification, erasure, objection, complaint to data protection authority. Contact aisuchanchan@gmail.com.
+Access, rectification, erasure, objection, complaint to data protection authority. Contact: kotohibinihongo@gmail.com
 
-## 8. How to delete your account
+## 8. How to delete your data
 
-**In-app**: Profile → ❌ Delete My Account → confirm twice. Data is removed immediately.
-
-**Via email**: Send to aisuchanchan@gmail.com with subject *"Account Deletion Request — Kotohibi Kana"* and your username or Google email. We will respond within 7 days. Note: since data is stored locally, you must uninstall the app for full data removal.
-
-**Uninstall**: Removing the app deletes all local data via OS sandbox.
+Uninstall the app — the OS clears all local data. No server-side data exists.
 
 ## 9. Security
 
-Passwords are hashed (SHA-256 + 16-byte random salt). Google OAuth uses PKCE. Data is in OS sandbox storage.
+Data is stored in the OS sandbox on your device; other apps cannot access it.
 
 ## 10. Changes
 
@@ -218,4 +166,4 @@ We will notify you in-app of significant changes.
 
 ## 11. Contact
 
-aisuchanchan@gmail.com
+kotohibinihongo@gmail.com

@@ -1,47 +1,70 @@
-# Hesap Silme — 言響 仮名 (Kotohibi Kana)
+# Veri Silme — 言響 Kotohibi Kana
 
-Play Store, kayıt olabilen uygulamalar için **standalone bir hesap silme sayfası** ister. Bu, Privacy Policy URL'inizden ayrı bir sayfa olabilir veya aynı sayfa içinde olabilir.
-
-Aşağıdaki içeriği bir HTML/markdown sayfası olarak yayınla, Play Console **App content → Account deletion** alanına URL'sini ver.
+**Yürürlük tarihi:** 4 Mayıs 2026
+**Son güncelleme:** 19 Mayıs 2026
 
 ---
 
-## 言響 仮名 — Hesap Silme Talimatları
+## 言響 Kotohibi Kana — Veri Silme Talimatları
 
-**Yürürlük tarihi:** 4 Mayıs 2026
+Bu uygulama **hesap oluşturma gerektirmez**. Tüm verileriniz yalnızca cihazınızda (AsyncStorage) saklanır; sunucuda hiçbir veri tutulmaz.
 
-### Uygulama içinden silme (önerilen)
+### Verilerinizi nasıl silersiniz?
 
-1. **言響 仮名** uygulamasını aç
-2. Ana ekranın sağ üstündeki **XP rozetine** veya alt sekmedeki **Profil**'e dokun
-3. Ekranı aşağı kaydırıp **Hesap** bölümüne git
-4. **❌ Hesabımı Sil** butonuna bas
-5. Çıkan iki uyarıyı onayla
-6. Hesabın ve tüm verilerin **anında** cihazdan silinir
+**Uygulamayı cihazınızdan kaldırmanız yeterlidir.** İşletim sistemi tüm yerel verileri otomatik olarak temizler.
 
 ### Silinen veriler
 
-- ✅ Hesap bilgileriniz (ad, e-posta, şifre hash'i, Google profil bağlantısı)
-- ✅ XP ve gün serisi
-- ✅ Öğrendiğiniz karakterler listesi
+Uygulama kaldırıldığında aşağıdaki veriler otomatik silinir:
+
+- ✅ Kullanıcı adınız
+- ✅ Puan ve gün serisi
+- ✅ Öğrendiğiniz imler listesi
 - ✅ Quiz istatistikleri (doğru/yanlış sayıları)
-- ✅ Günlük kana geçmişi
+- ✅ Tema/maskot tercihiniz
 
-### Saklanan veriler (sadece cihaz ayarı, kişisel değil)
+### Sunucuda veri var mı?
 
-- 🔵 Tema/maskot tercihi (anonim)
-- 🔵 Öğretmen tarafından eklenmiş içerik (varsa, kişisel veri içermez)
-
-Tüm verileri tamamen silmek için ek olarak uygulamayı cihazdan **kaldırabilirsiniz** — bu, geri kalan tüm yerel ayarları da temizler.
-
-### Uygulamaya erişiminiz yoksa
-
-Telefonu kaybettiyseniz veya uygulamayı zaten kaldırdıysanız: **veriler zaten o cihazdaydı**, biz uzaktan tutmuyoruz. Yine de yardım için: **aisuchanchan@gmail.com**
-
-E-posta konusu: **"Hesap Silme — Kotohibi Kana"**
-
-7 gün içinde size dönülür.
+**Hayır.** Bu uygulama sunucu veya bulut depolama kullanmaz. Tüm veriler yalnızca cihazınızdadır.
 
 ### İletişim
 
-aisuchanchan@gmail.com
+Sorularınız için: **kotohibinihongo@gmail.com**
+
+E-posta konusu: **"Veri Silme — Kotohibi Kana"**
+
+---
+---
+
+# Data Deletion — 言響 Kotohibi Kana
+
+**Effective date:** 4 May 2026
+**Last updated:** 19 May 2026
+
+## 言響 Kotohibi Kana — Data Deletion Instructions
+
+This app **does not require account creation**. All your data is stored locally on your device (AsyncStorage) only; no data is kept on any server.
+
+### How to delete your data
+
+**Simply uninstall the app from your device.** The operating system automatically removes all local data.
+
+### Deleted data
+
+When you uninstall the app, the following data is automatically deleted:
+
+- ✅ Your username
+- ✅ Points and day streak
+- ✅ Learned characters list
+- ✅ Quiz statistics (correct/incorrect counts)
+- ✅ Theme/mascot preference
+
+### Is there any server-side data?
+
+**No.** This app does not use any server or cloud storage. All data exists only on your device.
+
+### Contact
+
+Questions: **kotohibinihongo@gmail.com**
+
+Email subject: **"Data Deletion — Kotohibi Kana"**
